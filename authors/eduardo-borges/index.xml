@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Eduardo Borges on Hacking Things</title>
-    <link>https://erdrborges.github.io/authors/eduardo-borges/</link>
+    <link>http://localhost:1313/authors/eduardo-borges/</link>
     <description>Recent content in Eduardo Borges on Hacking Things</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 Apr 2024 14:44:22 -0300</lastBuildDate>
-    <atom:link href="https://erdrborges.github.io/authors/eduardo-borges/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/authors/eduardo-borges/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Minha primeira postagem</title>
-      <link>https://erdrborges.github.io/posts/teste/</link>
+      <link>http://localhost:1313/posts/teste/</link>
       <pubDate>Wed, 10 Apr 2024 14:44:22 -0300</pubDate>
-      <guid>https://erdrborges.github.io/posts/teste/</guid>
-      <description>#Título&#xA;Modelo de postagem</description>
+      <guid>http://localhost:1313/posts/teste/</guid>
+      <description>draft = &amp;ldquo;true&amp;rdquo;&#xA;#Título&#xA;Modelo de postagem</description>
     </item>
   </channel>
 </rss>
