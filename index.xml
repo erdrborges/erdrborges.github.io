@@ -10,9 +10,9 @@
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Proving Grounds - Photographer</title>
-      <link>http://localhost:1313/posts/proving-grounds/photographer/photographer/</link>
+      <link>http://localhost:1313/posts/proving-grounds/photographer/</link>
       <pubDate>Mon, 15 Apr 2024 09:00:08 -0300</pubDate>
-      <guid>http://localhost:1313/posts/proving-grounds/photographer/photographer/</guid>
+      <guid>http://localhost:1313/posts/proving-grounds/photographer/</guid>
       <description>Iniciando a série de postagens sobre desafios/CTFs realizados, decidi por documentar a máquina Photographer (nível Fácil/Easy), disponível gratuitamente no Proving Grounds Play. A máquina tem como objetivo o acesso inicial à ela, onde o atacante deve adquirir a chave de usuário, e posteriomente escalonar privilégios (privilege escalation), adquirindo a chave de root.&#xA;Enumeração Link to heading Para iniciar o processo de enumeração, realizei um scan de portas via nmap junto ao IP disponibilizado.</description>
     </item>
     <item>
