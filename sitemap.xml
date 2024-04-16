@@ -2,13 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://erdrborges.github.io/</loc>
+    <lastmod>2024-04-15T09:00:08-03:00</lastmod>
+  </url><url>
+    <loc>https://erdrborges.github.io/posts/</loc>
+    <lastmod>2024-04-15T09:00:08-03:00</lastmod>
+  </url><url>
+    <loc>https://erdrborges.github.io/posts/proving-grounds/photographer/photographer/</loc>
+    <lastmod>2024-04-15T09:00:08-03:00</lastmod>
+  </url><url>
     <loc>https://erdrborges.github.io/about/</loc>
   </url><url>
     <loc>https://erdrborges.github.io/authors/</loc>
   </url><url>
     <loc>https://erdrborges.github.io/categories/</loc>
-  </url><url>
-    <loc>https://erdrborges.github.io/</loc>
   </url><url>
     <loc>https://erdrborges.github.io/series/</loc>
   </url><url>
