@@ -4,8 +4,16 @@
     <title>Authors on Hacking Things</title>
     <link>https://erdrborges.github.io/authors/</link>
     <description>Recent content in Authors on Hacking Things</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 10 Jun 2024 10:17:05 -0300</lastBuildDate>
     <atom:link href="https://erdrborges.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Eduardo Borges</title>
+      <link>https://erdrborges.github.io/authors/eduardo-borges/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://erdrborges.github.io/authors/eduardo-borges/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

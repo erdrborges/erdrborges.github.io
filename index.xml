@@ -4,10 +4,17 @@
     <title>Hacking Things</title>
     <link>https://erdrborges.github.io/</link>
     <description>Recent content on Hacking Things</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Apr 2024 09:00:08 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 10 Jun 2024 10:17:05 -0300</lastBuildDate>
     <atom:link href="https://erdrborges.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Minha Experiência com a DCPT</title>
+      <link>https://erdrborges.github.io/posts/certificacoes/experiencia-dcpt/</link>
+      <pubDate>Mon, 10 Jun 2024 10:17:05 -0300</pubDate>
+      <guid>https://erdrborges.github.io/posts/certificacoes/experiencia-dcpt/</guid>
+      <description>Minha experiência com a DCPT Link to heading Neste artigo pretendo relatar sobre a minha trajetória para obter a certificação DCPT, tranzedo o ponto de vista de alguém que está iniciando na área.&#xA;Quem sou eu Link to heading Meu nome é Eduardo Borges e trabalho na área de tecnologia há mais de 5 anos. Possuo formação na área e atualmente estou me aperfeiçoando na carreira de cibersegurança. Para saber mais: https://www.</description>
+    </item>
     <item>
       <title>Proving Grounds - Photographer</title>
       <link>https://erdrborges.github.io/posts/proving-grounds/photographer/</link>
@@ -20,7 +27,7 @@
       <link>https://erdrborges.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://erdrborges.github.io/about/</guid>
-      <description>Sobre mim Link to heading Sou formado em Tecnologia em Sistemas para Internet pelo Instituto Federal Sul-rio-grandense, pós-graduado em Ethical Hacking &amp;amp; Cybersecurity pela Faculdade Uniciv e pós-graduando em Redes de Computadores pela Anhanguera Educacional.&#xA;Determinado a me desenvolver e trilhar uma carreira na área de cibersegurança, dedico meu tempo livre na realização de treinamentos, laboratórios e certificações, o que me possibilita compreender tanto a teoria por trás das tecnologias quanto aplicar o conhecimento adquirido na prática.</description>
+      <description>Sobre mim Link to heading Sou formado em Tecnologia em Sistemas para Internet pelo Instituto Federal Sul-rio-grandense, pós-graduado em Ethical Hacking &amp;amp; Cybersecurity pela Faculdade Uniciv e pós-graduando em Redes de Computadores e Gestão de projetos em TI, ambos pela Anhanguera Educacional.&#xA;Determinado a me desenvolver e trilhar uma carreira na área de cibersegurança, dedico meu tempo livre na realização de treinamentos, laboratórios e certificações, o que me possibilita compreender tanto a teoria por trás das tecnologias quanto aplicar o conhecimento adquirido na prática.</description>
     </item>
   </channel>
 </rss>

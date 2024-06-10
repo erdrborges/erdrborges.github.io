@@ -2,18 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Eduardo Borges on Hacking Things</title>
-    <link>http://localhost:1313/authors/eduardo-borges/</link>
+    <link>https://erdrborges.github.io/authors/eduardo-borges/</link>
     <description>Recent content in Eduardo Borges on Hacking Things</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Apr 2024 14:44:22 -0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/authors/eduardo-borges/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Jun 2024 10:17:05 -0300</lastBuildDate>
+    <atom:link href="https://erdrborges.github.io/authors/eduardo-borges/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Minha primeira postagem</title>
-      <link>http://localhost:1313/posts/teste/</link>
-      <pubDate>Wed, 10 Apr 2024 14:44:22 -0300</pubDate>
-      <guid>http://localhost:1313/posts/teste/</guid>
-      <description>draft = &amp;ldquo;true&amp;rdquo;&#xA;#Título&#xA;Modelo de postagem</description>
+      <title>Minha Experiência com a DCPT</title>
+      <link>https://erdrborges.github.io/posts/certificacoes/experiencia-dcpt/</link>
+      <pubDate>Mon, 10 Jun 2024 10:17:05 -0300</pubDate>
+      <guid>https://erdrborges.github.io/posts/certificacoes/experiencia-dcpt/</guid>
+      <description>Minha experiência com a DCPT Link to heading Neste artigo pretendo relatar sobre a minha trajetória para obter a certificação DCPT, tranzedo o ponto de vista de alguém que está iniciando na área.&#xA;Quem sou eu Link to heading Meu nome é Eduardo Borges e trabalho na área de tecnologia há mais de 5 anos. Possuo formação na área e atualmente estou me aperfeiçoando na carreira de cibersegurança. Para saber mais: https://www.</description>
+    </item>
+    <item>
+      <title>Proving Grounds - Photographer</title>
+      <link>https://erdrborges.github.io/posts/proving-grounds/photographer/</link>
+      <pubDate>Mon, 15 Apr 2024 09:00:08 -0300</pubDate>
+      <guid>https://erdrborges.github.io/posts/proving-grounds/photographer/</guid>
+      <description>Iniciando a série de postagens sobre desafios/CTFs realizados, decidi por documentar a máquina Photographer (nível Fácil/Easy), disponível gratuitamente no Proving Grounds Play. A máquina tem como objetivo o acesso inicial à ela, onde o atacante deve adquirir a chave de usuário, e posteriomente escalonar privilégios (privilege escalation), adquirindo a chave de root.&#xA;Enumeração Link to heading Para iniciar o processo de enumeração, realizei um scan de portas via nmap junto ao IP disponibilizado.</description>
     </item>
   </channel>
 </rss>

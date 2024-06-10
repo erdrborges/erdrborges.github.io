@@ -4,8 +4,37 @@
     <title>Tags on Hacking Things</title>
     <link>https://erdrborges.github.io/tags/</link>
     <description>Recent content in Tags on Hacking Things</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 10 Jun 2024 10:17:05 -0300</lastBuildDate>
     <atom:link href="https://erdrborges.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Certificação</title>
+      <link>https://erdrborges.github.io/tags/certifica%C3%A7%C3%A3o/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://erdrborges.github.io/tags/certifica%C3%A7%C3%A3o/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DCPT</title>
+      <link>https://erdrborges.github.io/tags/dcpt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://erdrborges.github.io/tags/dcpt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proving-Grounds</title>
+      <link>https://erdrborges.github.io/tags/proving-grounds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://erdrborges.github.io/tags/proving-grounds/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Writeups</title>
+      <link>https://erdrborges.github.io/tags/writeups/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://erdrborges.github.io/tags/writeups/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
