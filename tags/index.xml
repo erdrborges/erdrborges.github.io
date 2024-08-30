@@ -6,33 +6,40 @@
     <description>Recent content in Tags on Hacking Things</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Jun 2024 10:17:05 -0300</lastBuildDate>
+    <lastBuildDate>Fri, 30 Aug 2024 09:17:05 -0300</lastBuildDate>
     <atom:link href="https://erdrborges.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Certificação</title>
       <link>https://erdrborges.github.io/tags/certifica%C3%A7%C3%A3o/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 30 Aug 2024 09:17:05 -0300</pubDate>
       <guid>https://erdrborges.github.io/tags/certifica%C3%A7%C3%A3o/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>EJPT</title>
+      <link>https://erdrborges.github.io/tags/ejpt/</link>
+      <pubDate>Fri, 30 Aug 2024 09:17:05 -0300</pubDate>
+      <guid>https://erdrborges.github.io/tags/ejpt/</guid>
       <description></description>
     </item>
     <item>
       <title>DCPT</title>
       <link>https://erdrborges.github.io/tags/dcpt/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Jun 2024 10:17:05 -0300</pubDate>
       <guid>https://erdrborges.github.io/tags/dcpt/</guid>
       <description></description>
     </item>
     <item>
       <title>Proving-Grounds</title>
       <link>https://erdrborges.github.io/tags/proving-grounds/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 15 Apr 2024 09:00:08 -0300</pubDate>
       <guid>https://erdrborges.github.io/tags/proving-grounds/</guid>
       <description></description>
     </item>
     <item>
       <title>Writeups</title>
       <link>https://erdrborges.github.io/tags/writeups/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 15 Apr 2024 09:00:08 -0300</pubDate>
       <guid>https://erdrborges.github.io/tags/writeups/</guid>
       <description></description>
     </item>

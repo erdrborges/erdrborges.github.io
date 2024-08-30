@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EJPT on Hacking Things</title>
+    <link>https://erdrborges.github.io/tags/ejpt/</link>
+    <description>Recent content in EJPT on Hacking Things</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Aug 2024 09:17:05 -0300</lastBuildDate>
+    <atom:link href="https://erdrborges.github.io/tags/ejpt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Minha experiência com a eJPT</title>
+      <link>https://erdrborges.github.io/posts/certificacoes/experiencia-ejpt/</link>
+      <pubDate>Fri, 30 Aug 2024 09:17:05 -0300</pubDate>
+      <guid>https://erdrborges.github.io/posts/certificacoes/experiencia-ejpt/</guid>
+      <description>Neste artigo vou descrever minha experiência na obtenção da certificação eJPT v2.&#xA;Motivação para tirar a certificação Link to heading Decidi tirar a certificação Junior Penetration Tester (eJPT), disponibilizada pela INE, por ser considerada uma certificação de nível júnior e pelo seu preço atrativo. Em março/2024 aproveitei uma promoção chamada “March Madness” que dava U$ 100.00 de desconto na subscrição anual para a modalidade “Fundamentals”, fazendo com que o combo treinamento + voucher saísse por U$ 199.</description>
+    </item>
+  </channel>
+</rss>
