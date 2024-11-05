@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Proving Grounds - Shakabrah · Hacking Things
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Eduardo Borges">
+<meta name="description" content="Introdução Link to heading Dando continuidade a série de postagens sobre desafios/CTFs realizados, trago a documentação da máquina Shakabrah (nível Fácil/Easy), disponível gratuitamente no Proving Grounds Play.
+Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) envolvem máquinas vulneráveis que têm como objetivo testar as habilidades dos participantes em identificar e explorar essas falhas. Os competidores devem encontrar flags (bandeiras), que são evidências de que conseguiram comprometer com sucesso os alvos designados.">
+<meta name="keywords" content="blog,developer,personal">
+<meta name="fediverse:creator" content="" />
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Proving Grounds - Shakabrah">
+  <meta name="twitter:description" content="Introdução Link to heading Dando continuidade a série de postagens sobre desafios/CTFs realizados, trago a documentação da máquina Shakabrah (nível Fácil/Easy), disponível gratuitamente no Proving Grounds Play.
+Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) envolvem máquinas vulneráveis que têm como objetivo testar as habilidades dos participantes em identificar e explorar essas falhas. Os competidores devem encontrar flags (bandeiras), que são evidências de que conseguiram comprometer com sucesso os alvos designados.">
+
+<meta property="og:url" content="http://localhost:1313/posts/proving-grounds/shakabrah/">
+  <meta property="og:site_name" content="Hacking Things">
+  <meta property="og:title" content="Proving Grounds - Shakabrah">
+  <meta property="og:description" content="Introdução Link to heading Dando continuidade a série de postagens sobre desafios/CTFs realizados, trago a documentação da máquina Shakabrah (nível Fácil/Easy), disponível gratuitamente no Proving Grounds Play.
+Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) envolvem máquinas vulneráveis que têm como objetivo testar as habilidades dos participantes em identificar e explorar essas falhas. Os competidores devem encontrar flags (bandeiras), que são evidências de que conseguiram comprometer com sucesso os alvos designados.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-03T10:05:08-03:00">
+    <meta property="article:modified_time" content="2024-11-03T10:05:08-03:00">
+    <meta property="article:tag" content="Writeups">
+    <meta property="article:tag" content="Proving-Grounds">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/proving-grounds/shakabrah/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Hacking Things
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">Sobre</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/proving-grounds/shakabrah/">
+              Proving Grounds - Shakabrah
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-11-03T10:05:08-03:00">
+                November 3, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+    <a href="/authors/eduardo-borges/">Eduardo Borges</a></div>
+
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/writeups/">Writeups</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/proving-grounds/">Proving-Grounds</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h2 id="introdução">
+  Introdução
+  <a class="heading-link" href="#introdu%c3%a7%c3%a3o">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Dando continuidade a série de postagens sobre desafios/CTFs realizados, trago a documentação da máquina Shakabrah (nível Fácil/Easy), disponível gratuitamente no <a href="https://portal.offsec.com/labs/play"  class="external-link" target="_blank" rel="noopener">Proving Grounds Play</a>.</p>
+<p>Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) envolvem máquinas vulneráveis que têm como objetivo testar as habilidades dos participantes em identificar e explorar essas falhas. Os competidores devem encontrar flags (bandeiras), que são evidências de que conseguiram comprometer com sucesso os alvos designados.</p>
+<p>O desafio <strong>Shakabrah</strong> demanda um comprometimento inicial, onde o atacante deve adquirir a flag de usuário, e posteriormente escalonar privilégios (privilege escalation), adquirindo a flag de root.</p>
+<h2 id="enumeração">
+  Enumeração
+  <a class="heading-link" href="#enumera%c3%a7%c3%a3o">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Para iniciar o processo de enumeração, realizei um scan de portas via <a href="https://nmap.org/"  class="external-link" target="_blank" rel="noopener">nmap</a> junto ao IP disponibilizado.</p>
+<p><strong>Comando utilizado:</strong> <code>nmap -sV -p- --min-rate 10000 192.168.245.86</code></p>
+<p><strong>Resultado:</strong>
+<img src="/pg-shakabrah/imagem1.png#center" alt=""></p>
+<p>Visando facilitar o processo de análise e exploração, adicionei o IP 192.168.245.86 no arquivo /etc/hosts da máquina de atacante, atribuindo o nome <strong>shakabrah.pg</strong> ao IP.</p>
+<p>Na sequência, enumerei o webserver rodando na porta 80.</p>
+<p><strong>Comando utilizado:</strong> <code>dirsearch -w /usr/share/wordlists/dirb/big.txt -x 404 -u http://shakabrah.pg</code></p>
+<p><strong>Resultado:</strong>
+<img src="/pg-shakabrah/imagem2.png#center" alt=""></p>
+<p>Como o dirsearch não retornou informações interessantes, acessei a página através do navegador a fim de identificar suas características.</p>
+<p><img src="/pg-shakabrah/imagem3.png#center" alt=""></p>
+<p>De acordo com o título, se trata de uma ferramenta para testar a conexão a partir do comando Ping. Ao informar o IP 127.0.0.1 (localhost) e clicar no botão <strong>Go</strong>, o usuário visualiza o resultado do comando ping em tela, onde também é possível observar que a resposta (response) adicione o parâmetro <strong>host</strong> na URL do site, indicando que a requisição foi feita através do método GET:</p>
+<p><img src="/pg-shakabrah/imagem4.png#center" alt=""></p>
+<p>Ao analisar este comportamento, interpretei que os dados informados no input são repassados a uma função que realiza um ping junto à máquina, o que se não for sanitizado corretamente, pode servir como vetor para execução arbitrária de código (Remote Code Execution - RCE).</p>
+<p>Para confirmar essa hipótese, adicionei a string <strong>;ls</strong> ao final do IP 127.0.0.1, onde como resultado pude listar o conteúdo da pasta em que a página se encontra:</p>
+<p><img src="/pg-shakabrah/imagem5.png#center" alt=""></p>
+<p>Na sequência efetuei a leitura do arquivo <strong>/etc/passwd</strong>, passando como parâmetro a string <strong>;cat /etc/passwd</strong>:</p>
+<p><img src="/pg-shakabrah/imagem6.png#center" alt=""></p>
+<p>Também testei a possibilidade de utilizar o comando <a href="https://www.guiafoca.org/guiaonline/iniciante/ch12s05.html"  class="external-link" target="_blank" rel="noopener">pipe</a> para mostrar apenas o output do segundo comando, tendo sucesso na verificação da existência do binário <strong>nc</strong> no alvo:</p>
+<p><img src="/pg-shakabrah/imagem7.png#center" alt=""></p>
+<h2 id="exploração-e-acesso-inicial">
+  Exploração e acesso inicial
+  <a class="heading-link" href="#explora%c3%a7%c3%a3o-e-acesso-inicial">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Através da ferramenta online <a href="https://www.revshells.com/"  class="external-link" target="_blank" rel="noopener">Reverse Shell Generator</a> gerei uma shell reversa do tipo <strong>nc mkfifo</strong> encodada como <strong>URL encode</strong>, gerei um listener de netcat e passei a reverse shell como parâmetro via navegador:</p>
+<p><img src="/pg-shakabrah/imagem8.png#center" alt=""></p>
+<p>O processo de encoding é necessário para que o comando seja executado com sucesso.</p>
+<p>Como resultado, foi possível pegar uma shell como www-data:</p>
+<p><img src="/pg-shakabrah/imagem9.png#center" alt=""></p>
+<p>Dentro do diretório <strong>/home/dylan</strong> foi possível localizar o arquivo <strong>local.txt</strong>, contendo a flag de usuário:</p>
+<p><img src="/pg-shakabrah/imagem10.png#center" alt=""></p>
+<h2 id="escalonamento-de-privilégios">
+  Escalonamento de Privilégios
+  <a class="heading-link" href="#escalonamento-de-privil%c3%a9gios">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Iniciando a análise de vetores de escalonamento de privilégios, analisei os binários que possuem o <a href="https://www.redhat.com/en/blog/suid-sgid-sticky-bit"  class="external-link" target="_blank" rel="noopener">SUID bit</a> setado, onde foi possível identificar o binário <strong>/usr/bin/vim.basic</strong> como sendo divergente do padrão de SUID que normalmente encontramos no Linux:</p>
+<p><img src="/pg-shakabrah/imagem11.png#center" alt=""></p>
+<p>Ao pesquisar sobre o VIM junto ao <a href="https://gtfobins.github.io/gtfobins/vim/"  class="external-link" target="_blank" rel="noopener">GTFOBins</a> foi possível identificar um vetor de escalonamento a partir da exploração do binário com SUID setado.</p>
+<p>Comando executado: <code>/usr/bin/vim.basic -c ':py3 import os; os.execl(&quot;/bin/sh&quot;, &quot;sh&quot;, &quot;-pc&quot;, &quot;reset; exec sh -p&quot;)'</code></p>
+<p>Como resultado, o atacante acessa o VIM e visualiza uma shell com privilégios de root. Dentro do diretório <strong>/root</strong> foi possível localizar o arquivo <strong>proof.txt</strong>, contendo a flag de root:</p>
+<p><img src="/pg-shakabrah/imagem12.png#center" alt=""></p>
+<h2 id="conclusão">
+  Conclusão
+  <a class="heading-link" href="#conclus%c3%a3o">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Considerei este desafio bem tranquilo de ser feito, onde alerto como ponto de atenção a necessidade de passar o comando de reverse shell pelo processo de encoding para que o webserver consiga interpretar os caracteres especiais.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2024
+     Eduardo Borges 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

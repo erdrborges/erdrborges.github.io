@@ -833,3 +833,10 @@ body.colorscheme-dark {
       color: #6e7681; } }
 
 /*# sourceMappingURL=coder-dark.css.map */
+
+img[src$='#center'] {
+  display: block;
+  margin: 1.0rem auto;
+  max-width: 100%;
+  height: auto;
+}
