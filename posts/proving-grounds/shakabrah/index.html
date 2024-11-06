@@ -207,7 +207,7 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
 </ul>
 <p><img src="/pg-shakabrah/imagem1.png#center" alt="Resultado da execução do nmap"></p>
 <p>O scan com nmap retornou um servidor web na porta 80 e um servidor SSH na porta 22. Visando facilitar o processo de análise e exploração, adicionei o IP 192.168.245.86 no arquivo /etc/hosts da máquina de atacante, atribuindo o nome <strong>shakabrah.pg</strong> ao IP.</p>
-<p>Na sequência, enumerei o webserver através da ferramenta <a href="https://github.com/maurosoria/dirsearch"  class="external-link" target="_blank" rel="noopener">dirsearch</a>, utilizando a wordlist padrão da ferramenta <a href="https://www.kali.org/tools/dirb/"  class="external-link" target="_blank" rel="noopener">dirb</a>.</p>
+<p>Na sequência, enumerei o webserver através da ferramenta <a href="https://github.com/maurosoria/dirsearch"  class="external-link" target="_blank" rel="noopener">dirsearch</a>, utilizando a wordlist padrão da ferramenta <a href="https://www.kali.org/tools/dirb/"  class="external-link" target="_blank" rel="noopener">dirb</a> big.txt.</p>
 <p><strong>Comando:</strong> <code>dirsearch -w /usr/share/wordlists/dirb/big.txt -x 404 -u http://shakabrah.pg</code></p>
 <p><strong>Parâmetros:</strong></p>
 <ul>
@@ -218,10 +218,7 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
 <p><img src="/pg-shakabrah/imagem2.png#center" alt="Resultado da execução do dirsearch"></p>
 <p>Como o resultado do dirsearch não trouxe arquivos/diretórios a serem verificados, acessei a página através do navegador:</p>
 <p><img src="/pg-shakabrah/imagem3.png#center" alt="Acesso inicial ao webserver via navegador"></p>
-<p>De acordo com o título, se trata de uma ferramenta para testar a conexão a partir do comando Ping. Ao informar o IP 127.0.0.1 (localhost) e clicar no botão <strong>Go</strong>, o usuário visualiza o resultado do comando em tela.
-Também é possível observar que a resposta (response) adiciona o parâmetro <strong>host</strong> na URL do site, indicando que a requisição foi feita através do método GET:</p>
-<p><img src="/pg-shakabrah/imagem4.png#center" alt="Teste da funcionalidade de Ping"></p>
-<p>Ao analisar este comportamento, interpretei que os dados informados no input são repassados a uma função que realiza um ping junto à máquina, o que se não for sanitizado corretamente, pode servir como vetor para execução arbitrária de código (Remote Code Execution - RCE).</p>
+<p>De acordo com o título, se trata de uma f</p>
 <p>Para confirmar essa hipótese, adicionei a string <strong>;ls</strong> ao final do IP 127.0.0.1, onde como resultado pude listar o conteúdo do diretório em que a página se encontra:</p>
 <p><img src="/pg-shakabrah/imagem5.png#center" alt="Verificação da existência de RCE"></p>
 <p>Na sequência efetuei a leitura do arquivo <strong>/etc/passwd</strong>, passando como parâmetro a string <strong>;cat /etc/passwd</strong>:</p>
@@ -236,9 +233,7 @@ Também é possível observar que a resposta (response) adiciona o parâmetro <s
   </a>
 </h2>
 <p>Para preparar a máquina para uma conexão reversa, gerei um listener de netcat e na sequência, através da ferramenta online <a href="https://www.revshells.com/"  class="external-link" target="_blank" rel="noopener">Reverse Shell Generator</a>, gerei uma reverse shell do tipo <strong>nc mkfifo</strong> encodada como <strong>URL encode</strong>. Por fim, passei a shell como parâmetro da URL via navegador.</p>
-<p><img src="/pg-shakabrah/imagem8.png#center" alt="Processo de geração da reverse shell"></p>
-<p>Esse processo de encoding é necessário para que o comando seja executado corretamente, uma vez que ele possui caracteres especiais que podem ser interpretados de forma não desejada pelo servidor.</p>
-<p>Como resultado, foi possível pegar uma shell como www-data:</p>
+<p>shell como www-data:</p>
 <p><img src="/pg-shakabrah/imagem9.png#center" alt="Obtenção da reverse shell"></p>
 <p><strong>Parâmetros:</strong></p>
 <ul>
@@ -247,7 +242,7 @@ Também é possível observar que a resposta (response) adiciona o parâmetro <s
 </ul>
 <p>Uma vez com acesso à máquina, iniciei o processo de análise manual do sistema de arquivos em busca de artefatos que possam contribuir com a minha exploração.</p>
 <p>Dentro do diretório <strong>/home/dylan</strong> foi possível localizar o arquivo <strong>local.txt</strong>, contendo a flag de usuário:</p>
-<p><img src="/pg-shakabrah/imagem10.png#center" alt="Análise dos arquivos do diretório /home/dylan"></p>
+<p><img src="/pg-shakabrah/imagem10.png#center" alt="Diretório /home/dylan e flag de user"></p>
 <h2 id="escalonamento-de-privilégios">
   Escalonamento de Privilégios
   <a class="heading-link" href="#escalonamento-de-privil%c3%a9gios">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <title>
   Proving Grounds - Photographer · Hacking Things
 </title>
@@ -24,7 +24,7 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
   <meta name="twitter:description" content="Introdução Link to heading Iniciando a série de postagens sobre desafios/CTFs realizados, decidi por documentar a máquina Photographer (nível Fácil/Easy), disponível gratuitamente no Proving Grounds Play.
 Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) envolvem máquinas vulneráveis que têm como objetivo testar as habilidades dos participantes em identificar e explorar essas falhas. Os competidores devem encontrar “flags” (bandeiras), que são evidências de que conseguiram comprometer com sucesso os alvos designados.">
 
-<meta property="og:url" content="http://localhost:1313/posts/proving-grounds/photographer/">
+<meta property="og:url" content="https://erdrborges.github.io/posts/proving-grounds/photographer/">
   <meta property="og:site_name" content="Hacking Things">
   <meta property="og:title" content="Proving Grounds - Photographer">
   <meta property="og:description" content="Introdução Link to heading Iniciando a série de postagens sobre desafios/CTFs realizados, decidi por documentar a máquina Photographer (nível Fácil/Easy), disponível gratuitamente no Proving Grounds Play.
@@ -32,15 +32,15 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-11-05T09:00:08-03:00">
-    <meta property="article:modified_time" content="2024-11-05T09:00:08-03:00">
+    <meta property="article:published_time" content="2024-11-06T09:00:08-03:00">
+    <meta property="article:modified_time" content="2024-11-06T09:00:08-03:00">
     <meta property="article:tag" content="Writeups">
     <meta property="article:tag" content="Proving-Grounds">
 
 
 
 
-<link rel="canonical" href="http://localhost:1313/posts/proving-grounds/photographer/">
+<link rel="canonical" href="https://erdrborges.github.io/posts/proving-grounds/photographer/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -50,7 +50,7 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
 
   
   
-  <link rel="stylesheet" href="/css/coder.css" media="screen">
+  <link rel="stylesheet" href="/css/coder.min.07092c1350ffd254998dc43a44ae96e617d14af4df4602626878df89189c5e1a.css" integrity="sha256-BwksE1D/0lSZjcQ6RK6W5hfRSvTfRgJiaHjfiRicXho=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -60,7 +60,7 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
   
     
     
-    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
   
 
 
@@ -108,7 +108,7 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="http://localhost:1313/">
+    <a class="navigation-title" href="https://erdrborges.github.io/">
       Hacking Things
     </a>
     
@@ -143,7 +143,7 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="http://localhost:1313/posts/proving-grounds/photographer/">
+            <a class="title-link" href="https://erdrborges.github.io/posts/proving-grounds/photographer/">
               Proving Grounds - Photographer
             </a>
           </h1>
@@ -152,8 +152,8 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
           <div class="date">
             <span class="posted-on">
               <i class="fa-solid fa-calendar" aria-hidden="true"></i>
-              <time datetime="2024-11-05T09:00:08-03:00">
-                November 5, 2024
+              <time datetime="2024-11-06T09:00:08-03:00">
+                November 6, 2024
               </time>
             </span>
             <span class="reading-time">
@@ -205,7 +205,10 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
 <li><strong>-p-</strong> permite o scan de todas as 65.535 portas TCP;</li>
 <li><strong>--min-rate 10000</strong> informa ao nmap para tentar enviar no minimo 10000 pacotes por segundo, como uma tentativa de acelerar a análise (pode comprometer a precisão dos resultados dependendo da rede).</li>
 </ul>
-<p><img src="/pg-photographer/imagem1.png#center" alt="Resultado da execução do nmap"></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem1.png" alt="Resultado da execução do nmap" class="centered-image" />
+</div>
+
 <p>Para facilitar o processo de análise e exploração, adicionei o IP 192.168.245.76 no arquivo /etc/hosts da máquina de atacante, atribuindo o nome <strong>photographer.pg</strong> ao IP.</p>
 <p>Como o nmap retornou diversas portas abertas, iniciei a enumeração pelo serviço SMB (portas 139 e 445) através da ferramenta <a href="https://www.samba.org/samba/docs/4.9/man-html/smbclient.1.html"  class="external-link" target="_blank" rel="noopener">smbclient</a>.</p>
 <p><strong>Comando:</strong> <code>smbclient -L \\\\photographer.pg -N</code></p>
@@ -214,13 +217,22 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
 <li><strong>-L</strong> permite a listagem de serviços disponíveis no servidor;</li>
 <li><strong>-N</strong> suprime a requisição de senha ao usuário.</li>
 </ul>
-<p><img src="/pg-photographer/imagem2.png#center" alt="Execução da enumeração do SMB"></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem2.png" alt="Execução da enumeração do SMB" class="centered-image" />
+</div>
+
 <p>Na sequência efetuei a conexão no share <strong>sambashare</strong> utilizando credenciais nulas (null credentials):</p>
 <p><strong>Comando:</strong> <code>smbclient \\\\photographer.pg\\sambashare -N</code></p>
-<p><img src="/pg-photographer/imagem3.png#center" alt="Processo de conexão ao share"></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem3.png" alt="Processo de conexão ao share" class="centered-image" />
+</div>
+
 <p>Como resultado, foi possível identificar os arquivos <strong>mailsent.txt</strong> e <strong>wordpress.bkp.zip</strong>.</p>
 <p>Após baixar o arquivo <strong>mailsent.txt</strong> e analisar seu conteúdo, foi possível identificar um usuário chamado <strong>Daisa</strong> e o e-mail <strong><a href="mailto:daisa@photographer.com" >daisa@photographer.com</a></strong>:</p>
-<p><img src="/pg-photographer/imagem3.1.png#center" alt="Visualização do arquivo mailsent.txt"></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem3.1.png" alt="Visualização do arquivo mailsent.txt" class="centered-image" />
+</div>
+
 <p>O arquivo zipado <strong>wordpress.bkp.zip</strong> continha apenas uma instalação default de Wordpress que, apesar de não conter informações sensíveis, pode indicar a existência de uma instalação de Wordpress na estrutura.</p>
 <p>Para a enumeração do servidor web (webserver) rodando na porta <strong>80</strong> utilizei a ferramenta <a href="https://github.com/maurosoria/dirsearch"  class="external-link" target="_blank" rel="noopener">dirsearch</a> juntamente à wordlist padrão da ferramenta <a href="https://www.kali.org/tools/dirb/"  class="external-link" target="_blank" rel="noopener">dirb</a> big.txt.</p>
 <p><strong>Comando:</strong> <code>dirsearch -w /usr/share/wordlists/dirb/big.txt -x 404 -u http://photographer.pg</code></p>
@@ -230,15 +242,27 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
 <li><strong>-x 404</strong> exclui o status code <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"  class="external-link" target="_blank" rel="noopener">404</a>, o que facilita a análise do output do comando;</li>
 <li><strong>-u</strong>  permite a informação da URL a ser analisada.</li>
 </ul>
-<p><img src="/pg-photographer/imagem4.png#center" alt="Resultado do comando dirsearch na porta 80"></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem4.png" alt="Resultado do comando dirsearch na porta 80" class="centered-image" />
+</div>
+
 <p>O resultado do dirsearch mostrou algumas pastas que em análise manual não indicaram informações sensíveis.</p>
 <p>Ao acessar o webserver na porta <strong>80</strong> foi possível identificar a seguinte tela:</p>
-<p><img src="/pg-photographer/imagem5.png#center" alt="Página inicial do webserver na porta 80"></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem5.png" alt="Página inicial do webserver na porta 80" class="centered-image" />
+</div>
+
 <p>Dando continuidade ao processo de análise, efetuei a enumeração do webserver rodando na porta <strong>8000</strong>.</p>
 <p><strong>Comando:</strong> <code>dirsearch -w /usr/share/wordlists/dirb/big.txt -x 404 -u http://photographer.pg:8000</code></p>
-<p><img src="/pg-photographer/imagem6.png#center" alt="Resultado do comando dirsearch na porta 8000"></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem6.png" alt="Resultado do comando dirsearch na porta 8000" class="centered-image" />
+</div>
+
 <p>Com base no resultado do drsearch, acessei o diretório <strong>/admin</strong> via navegador para analisar seu conteúdo, onde o usuário é direcionado a um painel administrativo:</p>
-<p><img src="/pg-photographer/imagem7.png#center" alt="Painel administrativo do webserver na porta 8000"></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem7.png" alt="Painel administrativo do webserver na porta 8000" class="centered-image" />
+</div>
+
 <h2 id="exploração-e-acesso-incial">
   Exploração e acesso incial
   <a class="heading-link" href="#explora%c3%a7%c3%a3o-e-acesso-incial">
@@ -247,7 +271,10 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
   </a>
 </h2>
 <p>Inicialmente testei o processo de autenticação com dados randômicos, monitorando as requisições através do <a href="https://portswigger.net/burp/communitydownload"  class="external-link" target="_blank" rel="noopener">Burp Suite</a>, com o objetivo de identificar os parâmetros da requisição (request) e resposta (response):</p>
-<p><img src="/pg-photographer/imagem8.png#center" alt="Visualização da requisição via Burp Suite"></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem8.png" alt="Visualização da requisição via Burp Suite" class="centered-image" />
+</div>
+
 <p>Como resultado foi possível identificar que a requisição faz uma chamada ao endereço <strong>/api.php?/sessions</strong>, passando os parâmetros <strong>email</strong> e <strong>password</strong>. Caso o usuário não exista, o response retorna em formato json a mensagem <strong>User not found.</strong>. No caso da senha estar errada, o retorno de erro é: <strong>Incorrect. Try again or reset your password.</strong></p>
 <p>Como na fase de enumeração foi identificado o e-mail <strong><a href="mailto:daisa@photographer.com" >daisa@photographer.com</a></strong>, preparei um ataque de força bruta (brute force) através da ferramenta <a href="https://github.com/vanhauser-thc/thc-hydra"  class="external-link" target="_blank" rel="noopener">THC Hydra</a>, passando como referência o e-mail, os parâmetros e o retorno de erro em caso de senha incorreta:</p>
 <p><strong>Comando:</strong> <code>hydra -l daisa@photographer.com -P /usr/share/wordlists/rockyou.txt 192.168.245.76 -s 8000 http-post-form &quot;/api.php?/sessions:email=^USER^&amp;password=^PASS^:Incorrect. Try again or reset your password.&quot; -vv -I</code></p>
@@ -260,26 +287,53 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
 <li><strong>-vv</strong> aumenta a verbosidade dos resultados apresentados em tela;</li>
 <li><strong>-I</strong> ignora a existência de um arquivo de restauração do hydra.</li>
 </ul>
-<p><img src="/pg-photographer/imagem9.png#center" alt="Resultado do ataque de força bruta"></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem9.png" alt="Resultado do ataque de força bruta" class="centered-image" />
+</div>
+
 <p>Como resultado foi possível identificar um conjunto de credenciais válidas para o acesso administrativo à plataforma <strong>Kroken CMS</strong>. Na imagem abaixo é possível observar a tela inicial após autenticação:</p>
-<p><img src="/pg-photographer/imagem10.png#center" alt="Tela pós autenticação"></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem10.png" alt="Tela pós autenticação" class="centered-image" />
+</div>
+
 <p>Após explorar manualmente a plataforma, procurei por um exploit para o CMS, onde identifiquei falha que permite upload arbitrário de arquivos (autenticado): <a href="https://www.exploit-db.com/exploits/48706"  class="external-link" target="_blank" rel="noopener">Exploit-DB - Arbitrary File Upload (Authenticated)</a></p>
 <p>A referência indica que o CMS permite o upload irrestrito de arquivos a partir da manipulação da requisição. Através da identificação do diretório do webserver onde o arquivo foi inserido, o atacante pode localizar o caminho até o arquivo e executar sua webshell/reverse shell.</p>
 <p>Na sequência criei uma backdoor em PHP e dei o nome de <strong>image.php.jpg</strong>:</p>
-<p><img src="/pg-photographer/imagem11.png#center" alt="Geração do backdoor em PHP"></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem11.png" alt="Geração do backdoor em PHP" class="centered-image" />
+</div>
+
 <p>Efetuei o upload do arquivo através do botão <strong>Import content</strong> (canto inferior direito) do menu <strong>Library panel</strong>:</p>
-<p><img src="/pg-photographer/imagem12.png#center" alt="Detalhamento da área de upload de arquivos"></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem12.png" alt="Detalhamento da área de upload de arquivos" class="centered-image" />
+</div>
+
 <p>Através da interceptação da requisição via <a href="https://portswigger.net/burp/communitydownload"  class="external-link" target="_blank" rel="noopener">Burp Suite</a>, editei o conteúdo do parâmetro <strong>name</strong> (linha 18) e o conteúdo do parâmetro <strong>filename</strong> (linha 44), mudando ambos para <strong>image.php</strong> e dei encaminhamento (forward) a requisição:</p>
-<p><img src="/pg-photographer/imagem13.png#center" alt="Detalhamento da requisição sendo manipulada via Burp"></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem13.png" alt="Detalhamento da requisição sendo manipulada via Burp" class="centered-image" />
+</div>
+
 <p>Após essa alteração, selecionei o arquivo enviado ao servidor e no menu <strong>Inspector</strong> (lateral direita), cliquei com o botão direito do mouse na opção <strong>Download File</strong>, copiando o link do arquivo:</p>
-<p><img src="/pg-photographer/imagem14.png#center" alt="Detalhamento de como pegar o link do arquivo"></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem14.png" alt="Detalhamento de como pegar o link do arquivo" class="centered-image" />
+</div>
+
 <p>Ao colocar o endereço do arquivo no navegador, passando o comando <strong>whoami</strong> como valor do parâmetro <strong>cmd</strong> foi possível confirmar a execução arbitrária de código (Remote Code Execution - RCE) através de uma webshell:</p>
-<p><img src="/pg-photographer/imagem15.png#center" alt="Acesso a webshell via navegador"></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem15.png" alt="Acesso a webshell via navegador" class="centered-image" />
+</div>
+
 <p>Para preparar a máquina para uma conexão reversa, gerei um listener de netcat e na sequência, através da ferramenta online <a href="https://www.revshells.com/"  class="external-link" target="_blank" rel="noopener">Reverse Shell Generator</a>, gerei uma reverse shell do tipo <strong>nc mkfifo</strong> encodada como <strong>URL encode</strong>. Por fim, passei a shell como parâmetro da URL via navegador.</p>
-<p><img src="/pg-photographer/imagem16.png#center" alt="Processo de geração da reverse shell"></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem16.png" alt="Processo de geração da reverse shell" class="centered-image" />
+</div>
+
 <p>Esse processo de encoding é necessário para que o comando seja executado corretamente, uma vez que ele possui caracteres especiais que podem ser interpretados de forma não desejada pelo servidor.</p>
-<p>Como resultado, foi possível pegar uma shell como www-data:</p>
-<p><img src="/pg-photographer/imagem17.png#center" alt="Obtenção da reverse shell"></p>
+<p>Como resultado, foi possível pegar uma shell como <strong>www-data</strong>:</p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem17.png" alt="Obtenção da reverse shell" class="centered-image" />
+</div>
+
 <p><strong>Parâmetros:</strong></p>
 <ul>
 <li><strong>rlwrap</strong> <a href="https://github.com/hanslub42/rlwrap"  class="external-link" target="_blank" rel="noopener">Ferramenta</a> utilizada em conjunto ao netcat para fornecer uma shell mais estável, dando suporte a edição de linha e histórico de comandos;</li>
@@ -287,7 +341,10 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
 </ul>
 <p>Uma vez com acesso à máquina, iniciei o processo de análise manual do sistema de arquivos em busca de artefatos que possam contribuir com a minha exploração.</p>
 <p>Dentro do diretório <strong>/home/daisa</strong> foi possível localizar o arquivo <strong>local.txt</strong>, contendo a flag de usuário:</p>
-<p><img src="/pg-photographer/imagem18.png#center" alt=""></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem18.png" alt="Diretório /home/daisa e flag de user" class="centered-image" />
+</div>
+
 <h2 id="escalonamento-de-privilégios">
   Escalonamento de Privilégios
   <a class="heading-link" href="#escalonamento-de-privil%c3%a9gios">
@@ -296,11 +353,13 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
   </a>
 </h2>
 <p>Iniciando a análise de vetores de escalonamento de privilégios (privilege escalation), listei os usuários que possuem terminal ativo:</p>
-<p><strong>Comando utilizado:</strong> <code>cat /etc/passwd | grep &quot;/bin/bash&quot;</code></p>
-<p><strong>Resultado:</strong>
-<img src="/pg-photographer/imagem19.png#center" alt=""></p>
+<p><strong>Comando:</strong> <code>cat /etc/passwd | grep &quot;/bin/bash&quot;</code></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem19.png" alt="Visualização de usuários com shell" class="centered-image" />
+</div>
+
 <p>Na sequência fiz a análise de binários que possuem o SUID bit setado. Referência sobre <a href="https://reddyyz.github.io/blog/suid-privilege-escalation"  class="external-link" target="_blank" rel="noopener">SUID Privilege Escalation</a>.</p>
-<p><strong>Comando utilizado:</strong> <code>find / -type f -perm -04000 -ls 2&gt;/dev/null</code></p>
+<p><strong>Comando:</strong> <code>find / -type f -perm -04000 -ls 2&gt;/dev/null</code></p>
 <p><strong>Parâmetros:</strong></p>
 <ul>
 <li><strong>/</strong> indica a pesquisa a partir da raiz do sistema;</li>
@@ -309,10 +368,12 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
 <li><strong>-ls</strong> permite a listagem detalhada das informações obtidas a partir do find;</li>
 <li><strong>2&gt;/dev/null</strong> permite o redirecionamento das mensagens de erro para /dev/null, removendo possíveis erros da tela.</li>
 </ul>
-<p><strong>Resultado:</strong>
-<img src="/pg-photographer/imagem20.png#center" alt=""></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem20.png" alt="Visualização de binários com SUID bit setado" class="centered-image" />
+</div>
+
 <p>No resultado acima, o binário do PHP em <strong>/usr/bin/php7.2</strong> chamou a atenção por não ser um binário que comumente tem esse tipo de permissão. Através do site <a href="https://gtfobins.github.io/gtfobins/php/"  class="external-link" target="_blank" rel="noopener">GTFOBins</a>, um repositório muito interessante de binários que possuem vetores para escalonamento de privilégios, foi possível identificar como explorar a permissão de SUID para escalonar privilégios.</p>
-<p><strong>Comando utilizado:</strong> <code>/usr/bin/php7.2 -r &quot;pcntl_exec('/bin/sh',['-p']);&quot;</code></p>
+<p><strong>Comando:</strong> <code>/usr/bin/php7.2 -r &quot;pcntl_exec('/bin/sh',['-p']);&quot;</code></p>
 <p><strong>Parâmetros:</strong></p>
 <ul>
 <li><strong>-r</strong> permite a execução de código PHP através da linha de comando;</li>
@@ -320,11 +381,16 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
 <li><strong>/bin/sh</strong> programa que será executado para substituir o processo PHP;</li>
 <li><strong>-p</strong> parâmetro utilizado para iniciar uma shell protegida/privilegiada.</li>
 </ul>
-<p><strong>Resultado:</strong>
-<img src="/pg-photographer/imagem21.png#center" alt=""></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem21.png" alt="Processo de escalonamento de privilégios" class="centered-image" />
+</div>
+
 <p>Como resultado foi possível escalonar privilégios para o usuário <strong>root</strong>.</p>
 <p>Dentro do diretório <strong>/root</strong> foi possível localizar o arquivo <strong>proof.txt</strong> contendo a flag final (root) do desafio:</p>
-<p><img src="/pg-photographer/imagem22.png#center" alt=""></p>
+<div style="text-align: center;">
+  <img src="/pg-photographer/imagem22.png" alt="Visualização da flag de root" class="centered-image" />
+</div>
+
 <h2 id="conclusão">
   Conclusão
   <a class="heading-link" href="#conclus%c3%a3o">
@@ -332,9 +398,11 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<p>O desafio <strong>Photographer</strong> foi tranquilo de ser realizado, onde destaco X pontos de atenção:</p>
+<p>O desafio <strong>Photographer</strong> foi tranquilo de ser realizado, onde destaco alguns pontos de atenção:</p>
 <ul>
 <li>Notei após o bruteforce com hydra que a senha da conta de e-mail também estava disponível no arquivo <strong>mailsent.txt</strong> de uma forma sutil, reforçando a importância de uma enumeração minuciosa e de &ldquo;mente aberta&rdquo;.</li>
+<li>O processo de encoding da reverse shell é importante para garantir que os caracteres especiais sejam interpretados pelo webserver, a etapa de identificar essa necessidade me tomou um tempo a mais.</li>
+<li>Ler por completo e tentar entender o que um determinado exploit faz é importante não somente para garantir uma exploração com sucesso, mas também ajuda a criarmos um &ldquo;arsenal&rdquo; de técnicas e procedimentos para esse tipo de desafio.</li>
 </ul>
 
       </div>
@@ -379,7 +447,7 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
 
   
   
-  <script src="/js/coder.js"></script>
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
   
 
   
