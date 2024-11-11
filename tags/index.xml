@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Hacking Things</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://erdrborges.github.io/tags/</link>
     <description>Recent content in Tags on Hacking Things</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 11 Nov 2024 10:05:08 -0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://erdrborges.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Proving-Grounds</title>
-      <link>http://localhost:1313/tags/proving-grounds/</link>
+      <link>https://erdrborges.github.io/tags/proving-grounds/</link>
       <pubDate>Mon, 11 Nov 2024 10:05:08 -0300</pubDate>
-      <guid>http://localhost:1313/tags/proving-grounds/</guid>
+      <guid>https://erdrborges.github.io/tags/proving-grounds/</guid>
       <description></description>
     </item>
     <item>
       <title>Writeups</title>
-      <link>http://localhost:1313/tags/writeups/</link>
+      <link>https://erdrborges.github.io/tags/writeups/</link>
       <pubDate>Mon, 11 Nov 2024 10:05:08 -0300</pubDate>
-      <guid>http://localhost:1313/tags/writeups/</guid>
+      <guid>https://erdrborges.github.io/tags/writeups/</guid>
       <description></description>
     </item>
     <item>
       <title>Certificação</title>
-      <link>http://localhost:1313/tags/certifica%C3%A7%C3%A3o/</link>
+      <link>https://erdrborges.github.io/tags/certifica%C3%A7%C3%A3o/</link>
       <pubDate>Fri, 30 Aug 2024 09:17:05 -0300</pubDate>
-      <guid>http://localhost:1313/tags/certifica%C3%A7%C3%A3o/</guid>
+      <guid>https://erdrborges.github.io/tags/certifica%C3%A7%C3%A3o/</guid>
       <description></description>
     </item>
     <item>
       <title>EJPT</title>
-      <link>http://localhost:1313/tags/ejpt/</link>
+      <link>https://erdrborges.github.io/tags/ejpt/</link>
       <pubDate>Fri, 30 Aug 2024 09:17:05 -0300</pubDate>
-      <guid>http://localhost:1313/tags/ejpt/</guid>
+      <guid>https://erdrborges.github.io/tags/ejpt/</guid>
       <description></description>
     </item>
     <item>
       <title>DCPT</title>
-      <link>http://localhost:1313/tags/dcpt/</link>
+      <link>https://erdrborges.github.io/tags/dcpt/</link>
       <pubDate>Mon, 10 Jun 2024 10:17:05 -0300</pubDate>
-      <guid>http://localhost:1313/tags/dcpt/</guid>
+      <guid>https://erdrborges.github.io/tags/dcpt/</guid>
       <description></description>
     </item>
   </channel>
