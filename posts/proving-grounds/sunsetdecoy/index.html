@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <title>
   Proving Grounds - SunsetDecoy · Hacking Things
 </title>
@@ -13,7 +13,7 @@
 
 
 <meta name="author" content="Eduardo Borges">
-<meta name="description" content="Introdução Link to heading Dando continuidade à série de postagens sobre desafios/CTFs realizados, trago a documentação da máquina SunsetDecoy (nível Fácil/Easy), disponível gratuitamente no Proving Grounds Play.
+<meta name="description" content="Introdução Link to heading Dando continuidade à série de postagens sobre desafios realizados, trago a documentação da máquina SunsetDecoy (nível Fácil/Easy), disponível gratuitamente no Proving Grounds Play.
 Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) envolvem máquinas vulneráveis que têm como objetivo testar as habilidades dos participantes em identificar e explorar essas falhas. Os competidores devem encontrar flags (bandeiras), que são provas de que conseguiram comprometer com sucesso os alvos designados.">
 <meta name="keywords" content="blog,developer,personal">
 <meta name="fediverse:creator" content="" />
@@ -21,26 +21,26 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Proving Grounds - SunsetDecoy">
-  <meta name="twitter:description" content="Introdução Link to heading Dando continuidade à série de postagens sobre desafios/CTFs realizados, trago a documentação da máquina SunsetDecoy (nível Fácil/Easy), disponível gratuitamente no Proving Grounds Play.
+  <meta name="twitter:description" content="Introdução Link to heading Dando continuidade à série de postagens sobre desafios realizados, trago a documentação da máquina SunsetDecoy (nível Fácil/Easy), disponível gratuitamente no Proving Grounds Play.
 Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) envolvem máquinas vulneráveis que têm como objetivo testar as habilidades dos participantes em identificar e explorar essas falhas. Os competidores devem encontrar flags (bandeiras), que são provas de que conseguiram comprometer com sucesso os alvos designados.">
 
-<meta property="og:url" content="http://localhost:1313/posts/proving-grounds/sunsetdecoy/">
+<meta property="og:url" content="https://erdrborges.github.io/posts/proving-grounds/sunsetdecoy/">
   <meta property="og:site_name" content="Hacking Things">
   <meta property="og:title" content="Proving Grounds - SunsetDecoy">
-  <meta property="og:description" content="Introdução Link to heading Dando continuidade à série de postagens sobre desafios/CTFs realizados, trago a documentação da máquina SunsetDecoy (nível Fácil/Easy), disponível gratuitamente no Proving Grounds Play.
+  <meta property="og:description" content="Introdução Link to heading Dando continuidade à série de postagens sobre desafios realizados, trago a documentação da máquina SunsetDecoy (nível Fácil/Easy), disponível gratuitamente no Proving Grounds Play.
 Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) envolvem máquinas vulneráveis que têm como objetivo testar as habilidades dos participantes em identificar e explorar essas falhas. Os competidores devem encontrar flags (bandeiras), que são provas de que conseguiram comprometer com sucesso os alvos designados.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-11-13T11:00:08-03:00">
-    <meta property="article:modified_time" content="2024-11-13T11:00:08-03:00">
+    <meta property="article:published_time" content="2024-11-19T11:00:08-03:00">
+    <meta property="article:modified_time" content="2024-11-19T11:00:08-03:00">
     <meta property="article:tag" content="Writeups">
     <meta property="article:tag" content="Proving-Grounds">
 
 
 
 
-<link rel="canonical" href="http://localhost:1313/posts/proving-grounds/sunsetdecoy/">
+<link rel="canonical" href="https://erdrborges.github.io/posts/proving-grounds/sunsetdecoy/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -50,7 +50,7 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
 
   
   
-  <link rel="stylesheet" href="/css/coder.css" media="screen">
+  <link rel="stylesheet" href="/css/coder.min.07092c1350ffd254998dc43a44ae96e617d14af4df4602626878df89189c5e1a.css" integrity="sha256-BwksE1D/0lSZjcQ6RK6W5hfRSvTfRgJiaHjfiRicXho=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -60,7 +60,7 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
   
     
     
-    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
   
 
 
@@ -108,7 +108,7 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="http://localhost:1313/">
+    <a class="navigation-title" href="https://erdrborges.github.io/">
       Hacking Things
     </a>
     
@@ -143,7 +143,7 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="http://localhost:1313/posts/proving-grounds/sunsetdecoy/">
+            <a class="title-link" href="https://erdrborges.github.io/posts/proving-grounds/sunsetdecoy/">
               Proving Grounds - SunsetDecoy
             </a>
           </h1>
@@ -152,8 +152,8 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
           <div class="date">
             <span class="posted-on">
               <i class="fa-solid fa-calendar" aria-hidden="true"></i>
-              <time datetime="2024-11-13T11:00:08-03:00">
-                November 13, 2024
+              <time datetime="2024-11-19T11:00:08-03:00">
+                November 19, 2024
               </time>
             </span>
             <span class="reading-time">
@@ -188,7 +188,7 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<p>Dando continuidade à série de postagens sobre desafios/CTFs realizados, trago a documentação da máquina SunsetDecoy (nível Fácil/Easy), disponível gratuitamente no <a href="https://portal.offsec.com/labs/play"  class="external-link" target="_blank" rel="noopener">Proving Grounds Play</a>.</p>
+<p>Dando continuidade à série de postagens sobre desafios realizados, trago a documentação da máquina SunsetDecoy (nível Fácil/Easy), disponível gratuitamente no <a href="https://portal.offsec.com/labs/play"  class="external-link" target="_blank" rel="noopener">Proving Grounds Play</a>.</p>
 <p>Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) envolvem máquinas vulneráveis que têm como objetivo testar as habilidades dos participantes em identificar e explorar essas falhas. Os competidores devem encontrar flags (bandeiras), que são provas de que conseguiram comprometer com sucesso os alvos designados.</p>
 <h2 id="enumeração">
   Enumeração
@@ -197,7 +197,7 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<p>Para iniciar o processo de enumeração, realizei um scan de portas via <a href="https://nmap.org/"  class="external-link" target="_blank" rel="noopener">nmap</a> junto ao IP disponibilizado.</p>
+<p>Para iniciar o processo de enumeração, realizei uma varredura de portas via <a href="https://nmap.org/"  class="external-link" target="_blank" rel="noopener">nmap</a> junto ao IP disponibilizado.</p>
 <div style="text-align: center;">
   <img src="/pg-sunsetdecoy/imagem1.png" alt="Resultado da execução do nmap" class="centered-image" />
 </div>
@@ -209,7 +209,7 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
 <li><strong>-p-</strong> permite o scan de todas as 65.535 portas TCP;</li>
 <li><strong>--min-rate 10000</strong> informa ao nmap para tentar enviar no mínimo 10000 pacotes por segundo, como uma tentativa de acelerar a análise (pode impactar a precisão dos resultados).</li>
 </ul>
-<p>O scan com nmap retornou que um servidor web na porta 80 e um servidor SSH na porta 22. Ao acessar o servidor web via navegador, foi possível identificar que não existe um arquivo index.php ou index.html, visto que a página mostrou seu índice (Index of):</p>
+<p>A varredura com nmap retornou que um servidor web na porta 80 e um servidor SSH na porta 22. Ao acessar o servidor web via navegador, foi possível identificar que não existe um arquivo index.php ou index.html, visto que a página mostrou seu índice (Index of):</p>
 <div style="text-align: center;">
   <img src="/pg-sunsetdecoy/imagem2.png" alt="Visualização ao acessar o webserver via navegador" class="centered-image" />
 </div>
@@ -219,7 +219,7 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
   <img src="/pg-sunsetdecoy/imagem3.png" alt="Download do arquivo save.zip" class="centered-image" />
 </div>
 
-<p>Ao analisar seu tipo através do comando <strong>file</strong>, foi possível confirmar como sendo um zip. Ao tentar efetuar a descompressão, uma senha é solicitada, onde também é possível ver que os arquivos compactados aparentemente se referem a um sistema linux:</p>
+<p>Ao analisar seu tipo através do comando <strong>file</strong>, foi possível confirmar como sendo um zip. Ao tentar descompactar o arquivo, uma senha é solicitada, e também é possível ver que os arquivos compactados aparentemente se referem a um sistema linux:</p>
 <div style="text-align: center;">
   <img src="/pg-sunsetdecoy/imagem4.png" alt="Manipulação do arquivo zip" class="centered-image" />
 </div>
@@ -231,7 +231,7 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<p>Para efetuar a tentativa de cracking desta senha, será utilizada a ferramenta <strong>zip2john</strong>, que faz parte da ferramenta <a href="https://www.openwall.com/john/"  class="external-link" target="_blank" rel="noopener">John the Ripper</a>.</p>
+<p>Para tentar quebrar esta senha, será utilizada a ferramenta <strong>zip2john</strong>, que faz parte da ferramenta <a href="https://www.openwall.com/john/"  class="external-link" target="_blank" rel="noopener">John the Ripper</a>.</p>
 <p><strong>Comando:</strong> <code>zip2john save.zip &gt; hash</code></p>
 <div style="text-align: center;">
   <img src="/pg-sunsetdecoy/imagem5.png" alt="Geração da hash do zip" class="centered-image" />
@@ -295,13 +295,13 @@ Passando o parâmetro <strong>-t</strong> e o binário <strong>bash</strong> foi
   <img src="/pg-sunsetdecoy/imagem14.1.png" alt="Validação de PATH" class="centered-image" />
 </div>
 
-<p>Para corrigir, executei o comando abaixo, que adiciona os caminhos de binários mais comuns a variavel PATH:</p>
+<p>Para corrigir, executei o comando abaixo, que adiciona os caminhos de binários mais comuns à variavel PATH:</p>
 <p><strong>Comando:</strong> <code>export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin</code></p>
 <div style="text-align: center;">
   <img src="/pg-sunsetdecoy/imagem14.2.png" alt="Rbash brakeout" class="centered-image" />
 </div>
 
-<p>Uma vez com acesso à máquina e com uma shell com acesso aos principais binários, iniciei o processo de análise manual do sistema de arquivos em busca de artefatos que possam contribuir com a minha exploração.</p>
+<p>Uma vez com acesso à máquina e com uma shell que fornece acesso aos principais binários, iniciei o processo de análise manual do sistema de arquivos em busca de artefatos que possam contribuir com a minha exploração.</p>
 <p>Dentro do diretório <strong>/home/296640a3b825115a47b68fc44501c828</strong> foi possível localizar o arquivo <strong>user.txt</strong>, contendo a flag de usuário:</p>
 <div style="text-align: center;">
   <img src="/pg-sunsetdecoy/imagem15.png" alt="Visualização da flag de usuário" class="centered-image" />
@@ -319,13 +319,13 @@ Passando o parâmetro <strong>-t</strong> e o binário <strong>bash</strong> foi
   <img src="/pg-sunsetdecoy/imagem15.1.png" alt="Execução do binário honeypot.decoy" class="centered-image" />
 </div>
 
-<p>Após executá-lo, aparentemente nada aconteceu, porém ao analisar os processos da máquina através ferramenta <a href="https://github.com/DominicBreuker/pspy"  class="external-link" target="_blank" rel="noopener">pspy</a>, que possibilita o usuário &lsquo;bisbilhotar&rsquo; os processos sem a necessidade de root, foi possível notar a execução de um programa chamado <strong>chkrootkit</strong>:</p>
+<p>Após executá-lo, aparentemente nada aconteceu, porém, ao analisar os processos da máquina através da ferramenta <a href="https://github.com/DominicBreuker/pspy"  class="external-link" target="_blank" rel="noopener">pspy</a>, que possibilita o usuário &lsquo;bisbilhotar&rsquo; os processos sem a necessidade de root, foi possível notar a execução de um programa chamado <strong>chkrootkit</strong>:</p>
 <div style="text-align: center;">
   <img src="/pg-sunsetdecoy/imagem16.png" alt="Visualização do processo de chkrootkit" class="centered-image" />
 </div>
 
 <p>Ao pesquisar na internet sobre o Chkrootkit na versão 0.49, foi possível identificar a possibilidade de executar um escalonamento de privilégios local, conforme indicado nessa <a href="https://www.exploit-db.com/exploits/33899"  class="external-link" target="_blank" rel="noopener">documentação</a>.</p>
-<p>Conforme indicado no link, se um atacante sabe da execução constante do chkrootkit, seja através de um cronjob, seja através de outro script e, o atacante tem acesso a pasta temporária <strong>/tmp</strong>, ele pode utilizar da falha existente para executar um arquivo denominado <strong>update</strong> como root:</p>
+<p>Conforme indicado no link, se um atacante sabe da execução constante do chkrootkit, seja por meio de um cronjob, seja por meio de outro script, e o atacante tem acesso à pasta temporária <strong>/tmp</strong>, ele pode utilizar da falha existente para executar um arquivo denominado <strong>update</strong> como root:</p>
 <div style="text-align: center;">
   <img src="/pg-sunsetdecoy/imagem17.png" alt="Explicação do processo de exploração" class="centered-image" />
 </div>
@@ -352,7 +352,7 @@ Passando o parâmetro <strong>-t</strong> e o binário <strong>bash</strong> foi
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<p>O desafio <strong>SunsetDecoy</strong> foi relativamente simples, porém destaco alguns pontos de atenção:</p>
+<p>O desafio <strong>SunsetDecoy</strong> foi relativamente simples, mas destaco alguns pontos de atenção:</p>
 <ul>
 <li>A parte de exportar um novo valor para a variável de ambiente PATH foi algo novo para mim, sendo uma técnica muito interessante de se ter em seu arsenal de &ldquo;guerra&rdquo;;</li>
 <li>Na parte de escalonamento de privilégios, ficou evidenciada a importância de sempre testar/validar as descobertas, pois somente através da execução da opção 5 do binário <strong>honeypot.decoy</strong> é que foi possível identificar a execução do <strong>chkrootkit</strong>.</li>
@@ -400,7 +400,7 @@ Passando o parâmetro <strong>-t</strong> e o binário <strong>bash</strong> foi
 
   
   
-  <script src="/js/coder.js"></script>
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
   
 
   
