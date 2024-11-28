@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Proving Grounds - Amaterasu · Hacking Things
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Eduardo Borges">
+<meta name="description" content="Dando continuidade à série de postagens sobre desafios realizados, trago a documentação da máquina Amaterasu (nível Fácil/Easy), disponível gratuitamente no Proving Grounds Play.
+Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) envolvem máquinas vulneráveis que têm como objetivo testar as habilidades dos participantes em identificar e explorar essas falhas. Os competidores devem encontrar flags (bandeiras), que são provas de que conseguiram comprometer com sucesso os alvos designados.">
+<meta name="keywords" content="blog,developer,personal">
+<meta name="fediverse:creator" content="" />
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Proving Grounds - Amaterasu">
+  <meta name="twitter:description" content="Dando continuidade à série de postagens sobre desafios realizados, trago a documentação da máquina Amaterasu (nível Fácil/Easy), disponível gratuitamente no Proving Grounds Play.
+Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) envolvem máquinas vulneráveis que têm como objetivo testar as habilidades dos participantes em identificar e explorar essas falhas. Os competidores devem encontrar flags (bandeiras), que são provas de que conseguiram comprometer com sucesso os alvos designados.">
+
+<meta property="og:url" content="https://erdrborges.github.io/posts/proving-grounds/amaterasu/">
+  <meta property="og:site_name" content="Hacking Things">
+  <meta property="og:title" content="Proving Grounds - Amaterasu">
+  <meta property="og:description" content="Dando continuidade à série de postagens sobre desafios realizados, trago a documentação da máquina Amaterasu (nível Fácil/Easy), disponível gratuitamente no Proving Grounds Play.
+Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) envolvem máquinas vulneráveis que têm como objetivo testar as habilidades dos participantes em identificar e explorar essas falhas. Os competidores devem encontrar flags (bandeiras), que são provas de que conseguiram comprometer com sucesso os alvos designados.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-28T08:00:08-03:00">
+    <meta property="article:modified_time" content="2024-11-28T08:00:08-03:00">
+    <meta property="article:tag" content="Writeups">
+    <meta property="article:tag" content="Proving-Grounds">
+
+
+
+
+<link rel="canonical" href="https://erdrborges.github.io/posts/proving-grounds/amaterasu/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.07092c1350ffd254998dc43a44ae96e617d14af4df4602626878df89189c5e1a.css" integrity="sha256-BwksE1D/0lSZjcQ6RK6W5hfRSvTfRgJiaHjfiRicXho=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://erdrborges.github.io/">
+      Hacking Things
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">Sobre</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://erdrborges.github.io/posts/proving-grounds/amaterasu/">
+              Proving Grounds - Amaterasu
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-11-28T08:00:08-03:00">
+                November 28, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+    <a href="/authors/eduardo-borges/">Eduardo Borges</a></div>
+
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/writeups/">Writeups</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/proving-grounds/">Proving-Grounds</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>Dando continuidade à série de postagens sobre desafios realizados, trago a documentação da máquina Amaterasu (nível Fácil/Easy), disponível gratuitamente no <a href="https://portal.offsec.com/labs/play"  class="external-link" target="_blank" rel="noopener">Proving Grounds Play</a>.</p>
+<p>Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) envolvem máquinas vulneráveis que têm como objetivo testar as habilidades dos participantes em identificar e explorar essas falhas. Os competidores devem encontrar flags (bandeiras), que são provas de que conseguiram comprometer com sucesso os alvos designados.</p>
+<h2 id="enumeração">
+  Enumeração
+  <a class="heading-link" href="#enumera%c3%a7%c3%a3o">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Para iniciar o processo de enumeração, realizei uma varredura de portas via nmap junto ao IP disponibilizado.</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem1.png" alt="Resultado da execução do nmap" class="centered-image" />
+</div>
+
+<p><strong>Comando:</strong> <code>nmap -sV -p- --min-rate 10000 192.168.150.249</code></p>
+<p><strong>Parâmetros:</strong></p>
+<ul>
+<li><strong>-sV</strong> permite a identificação dos serviços/versões que estão rodando nas portas que forem identificadas como abertas (open);</li>
+<li><strong>-p-</strong> permite o scan de todas as 65.535 portas TCP;</li>
+<li><strong>--min-rate 10000</strong> informa ao nmap para tentar enviar no mínimo 10000 pacotes por segundo, como uma tentativa de acelerar a análise (pode impactar a precisão dos resultados).</li>
+</ul>
+<p>A varredura com nmap retornou diversas portas abertas, destacando-se as portas 21, 33414 e 40080. Visando facilitar o processo de análise e exploração, adicionei o IP 192.168.150.249 no arquivo /etc/hosts da máquina do atacante, atribuindo o nome amaterasu.pg ao IP.</p>
+<p>O serviço FTP (21) aceitou conexão como <strong>anonymous:anonymous</strong>, porém não foi possível listar os arquivos:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem2.png" alt="Acesso anônimo ao FTP" class="centered-image" />
+</div>
+
+<p>Ao acessar o servidor web rodando na porta 40080, é possível visualizar a seguinte imagem:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem3.png" alt="Acesso a 40080 via navegador" class="centered-image" />
+</div>
+
+<p>Na sequência, enumerei o servidor web através da ferramenta <a href="https://github.com/maurosoria/dirsearch"  class="external-link" target="_blank" rel="noopener">dirsearch</a>, utilizando a wordlist padrão da ferramenta <a href="https://www.kali.org/tools/dirb/"  class="external-link" target="_blank" rel="noopener">dirb</a> big.txt.</p>
+<p><strong>Comando:</strong> <code>dirsearch -w /usr/share/wordlists/dirb/big.txt -x 404 -u http://amaterasu.pg:40080</code></p>
+<p><strong>Parâmetros:</strong></p>
+<ul>
+<li><strong>-w</strong> permite informar uma wordlist a ser utilizada para o processo de ataque de dicionário;</li>
+<li><strong>-x 404</strong> exclui o status code <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"  class="external-link" target="_blank" rel="noopener">404</a>, o que facilita a análise do output do comando;</li>
+<li><strong>-u</strong>  permite a informação da URL a ser analisada.</li>
+</ul>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem4.png" alt="Execução do dirsearch na 40080" class="centered-image" />
+</div>
+
+<p>A análise manual das pastas e do arquivo <strong>LICENSE</strong> identificados não retornou dados de interesse.</p>
+<p>Em seguida, realizei uma comunicação com a porta <strong>33414</strong> através do <a href="https://tecnoblog.net/responde/o-que-e-telnet/"  class="external-link" target="_blank" rel="noopener">telnet</a>, onde foi possível confirmar que se trata de um servidor web:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem5.png" alt="Telnet na porta 33414" class="centered-image" />
+</div>
+
+<p>Na sequência rodei a ferramenta dirsearch no alvo.</p>
+<p><strong>Comando:</strong> <code>dirsearch -w /usr/share/wordlists/dirb/big.txt -x 404 -u http://amaterasu.pg:33414</code></p>
+<p><strong>Parâmetros:</strong></p>
+<ul>
+<li><strong>-w</strong> permite a informação de uma wordlist a ser utilizada para o processo de ataque de dicionário;</li>
+<li><strong>-x 404</strong> exclui o status code <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"  class="external-link" target="_blank" rel="noopener">404</a>, o que facilita a análise do output do comando;</li>
+<li><strong>-u</strong>  permite a informação da URL a ser analisada.</li>
+</ul>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem6.png" alt="Execução do dirsearch na 33414" class="centered-image" />
+</div>
+
+<p>Como resultado, foi possível identificar dois endpoints. Ao acessar o endpoint <strong>/info</strong> via navegador foi possível identificar que na porta 33414 roda um serviço chamado <strong>Python File Server REST API v2.5</strong>:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem7.png" alt="Acesso ao endpoint /info" class="centered-image" />
+</div>
+
+<p>Ao acessar o endpoint <strong>/help</strong> via navegador foi possível identificar os endpoints existentes no servidor e por quais métodos é possível fazer requisições:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem8.png" alt="Acesso ao endpoint /help" class="centered-image" />
+</div>
+
+<h2 id="exploração-e-acesso-inicial">
+  Exploração e acesso inicial
+  <a class="heading-link" href="#explora%c3%a7%c3%a3o-e-acesso-inicial">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Ao realizar uma requisição para o endpoint <strong>/file-upload</strong> utilizando o método POST, complementando com o parâmetro <strong>-i</strong> para visualizar o cabeçalho de resposta, foi possível perceber a falta do parâmetro <strong>file</strong>, indicado pela mensagem de erro exibida:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem9.png" alt="Curl ao endpoint /file-upload" class="centered-image" />
+</div>
+
+<p>Ao efetuar uma nova requisição, dessa vez efetuando o upload de um arquivo de testes através do parâmetro <strong>-F</strong>, que permite o envio de dados de formulário (adicionando o formato multipart/form-data ao request), foi possível identificar a falta do parâmetro <strong>filename</strong>:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem10.png" alt="Curl de tentativa de upload" class="centered-image" />
+</div>
+
+<p>Na sequência, presumindo que o parâmetro <strong>filename</strong> diz respeito ao destino do upload, informei o diretório <strong>/var/www/html/</strong>, onde obtive um erro de código 500. Entretanto, ao informar o diretório <strong>/tmp/</strong>, a requisição retornou no parâmetro <strong>message</strong> que o upload teve sucesso:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem11.png" alt="Curl de upload com sucesso" class="centered-image" />
+</div>
+
+<p>Ao acessar o endereço <a href="http://amaterasu.pg:33414/file-list?dir=/tmp"  class="external-link" target="_blank" rel="noopener">http://amaterasu.pg:33414/file-list?dir=/tmp</a>, para visualizar os arquivos do diretório <strong>/tmp/</strong>, foi possível identificar que o arquivo <strong>teste.txt</strong> realmente sofreu upload:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem12.png" alt="Visualização dos arquivos em /tmp" class="centered-image" />
+</div>
+
+<p>Como tenho capacidade de visualizar diretórios, efetuei a visualização do diretório <strong>/home</strong> o que me possibilitou enumerar o usuário <strong>alfredo</strong>:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem13.png" alt="Enumeração do usuário alfredo" class="centered-image" />
+</div>
+
+<p>Também efetuei a enumeração dos diretórios e arquivos do usuário <strong>alfredo</strong>, onde pude visualizar o diretório <strong>/home/alfredo/.ssh</strong>, indicando que o usuário pode autenticar via ssh:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem14.png" alt="Enumeração dos diretórios do user alfredo" class="centered-image" />
+</div>
+
+<p>Ao tentar realizar o upload da minha chave pública de SSH para o diretório <strong>/home/alfredo/.ssh</strong>, pude notar que o servidor só aceita arquivos com extensão <code>txt</code>, <code>pdf</code>, <code>png</code>, <code>jpg</code>, <code>jpeg</code> ou <code>gif</code>:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem15.png" alt="Tentativa de upload da id_rsa.pub" class="centered-image" />
+</div>
+
+<p>Para contornar essa limitação, efetuei uma cópia do <strong>id_rsa.pub</strong>, dando a nomenclatura <strong>id_rsa.txt</strong>, onde por fim consegui efetuar o upload do arquivo em um arquivo denominado <strong>authorized_keys</strong>. Esse arquivo permite o armazenamento das chaves públicas autorizadas a se conectar via SSH.</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem16.png" alt="Tentativa de upload da id_rsa.pub" class="centered-image" />
+</div>
+
+<p>Por fim, efetuei o acesso via SSH como <strong>alfredo</strong>:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem17.png" alt="Acesso via SSH" class="centered-image" />
+</div>
+
+<p>Uma vez com acesso à máquina, iniciei o processo de análise manual do sistema de arquivos em busca de artefatos que possam contribuir com a minha exploração.</p>
+<p>Dentro do diretório <strong>/home/alfredo</strong> foi possível localizar o arquivo <strong>local.txt</strong>, contendo a flag de usuário:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem18.png" alt="Leitura da flag de usuário" class="centered-image" />
+</div>
+
+<h2 id="escalonamento-de-privilégios">
+  Escalonamento de Privilégios
+  <a class="heading-link" href="#escalonamento-de-privil%c3%a9gios">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Iniciando a análise de vetores de escalonamento de privilégios, analisei o arquivo <strong>/etc/crontab</strong>, responsável pela configuração do agendador de tarefas <strong>cron</strong>, onde foi possível identificar uma entrada onde o arquivo <strong>/usr/local/bin/backup-flask.sh</strong> roda a cada minuto com privilégios de <strong>root</strong>:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem19.png" alt="Leitura da flag de usuário" class="centered-image" />
+</div>
+
+<p>Ao analisar as permissões que o usuário <strong>alfredo</strong> tem sobre o arquivo, bem como seu conteúdo, foi possível identificar que o script executa algumas ações:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem20.png" alt="Permissões e conteúdo do arquivo backup-flask.sh" class="centered-image" />
+</div>
+
+<p>A última linha do arquivo chama atenção por realizar a compactação de todos os arquivos no diretório <strong>/home/alfredo/restapi</strong>, criando o arquivo <strong>/tmp/flask.tar.gz</strong>. Como o asterisco representa um <a href="https://medium.com/@polygonben/linux-privilege-escalation-wildcards-with-tar-f79ab9e407fa"  class="external-link" target="_blank" rel="noopener">wildcard</a>, podemos utilizar essa falta de especificação de destino/arquivos a serem compactados para escalonar privilégios.</p>
+<p>Para tal, inicialmente criei um arquivo chamado <strong>privesc.sh</strong> dentro do caminho (PATH) <strong>/home/alfredo/restapi</strong>, contendo um comando para escrever no arquivo <strong>/etc/sudoers</strong> uma regra que dá permissão ao usuário <strong>alfredo</strong> em todo ambiente (ALL), possibilitando que ele execute comandos como <strong>root</strong>, sem fornecer senha (NOPASSWD), sem qualquer tipo de restrição (ALL).</p>
+<p><strong>Comando</strong>: <code>echo 'alfredo ALL=(root) NOPASSWD: ALL' &gt; /etc/sudoers</code></p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem21.png" alt="Criação do arquivo a ser executado" class="centered-image" />
+</div>
+
+<p>Na sequência, escrevi uma string vazia em dois arquivos, <strong>--checkpoint=1</strong> e <strong>--checkpoint-action=sh privesc.sh</strong>, fazendo com que a ferramenta tar execute-os como parâmetro:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem22.png" alt="Criação dos arquivos para a manipulação do comportamento do tar" class="centered-image" />
+</div>
+
+<p>Como resultado, foi possível escalar privilégios para o usuário <strong>root</strong>:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem23.png" alt="Criação do arquivo a ser executado" class="centered-image" />
+</div>
+
+<p>Ao acessar o diretório <strong>/root</strong> foi possível localizar o arquivo <strong>proof.txt</strong>, contendo a flag de root:</p>
+<div style="text-align: center;">
+  <img src="/pg-amaterasu/imagem24.png" alt="Leitura da flag de root" class="centered-image" />
+</div>
+
+<h2 id="conclusão">
+  Conclusão
+  <a class="heading-link" href="#conclus%c3%a3o">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>No desafio <strong>amaterasu</strong> pude aprender como realizar o escalonamento de privilégios através da manipulação de wildcard junto à ferramenta <strong>tar</strong>, onde destaco mais uma vez a importância de atenção aos detalhes, pois apenas uma análise correta do arquivo <strong>backup-flask.sh</strong> permite o escalonamento com sucesso.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2024
+     Eduardo Borges 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

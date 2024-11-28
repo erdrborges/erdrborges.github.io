@@ -205,11 +205,11 @@ Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) e
 <p><strong>Comando:</strong> <code>nmap -sV -p- --min-rate 10000 192.168.177.85</code></p>
 <p><strong>Parâmetros:</strong></p>
 <ul>
-<li><strong>-sV</strong> permite a identificação dos serviços/versões rodando nas portas que forem identificadas como abertas (open);</li>
+<li><strong>-sV</strong> permite a identificação dos serviços/versões que estão rodando nas portas que forem identificadas como abertas (open);</li>
 <li><strong>-p-</strong> permite o scan de todas as 65.535 portas TCP;</li>
 <li><strong>--min-rate 10000</strong> informa ao nmap para tentar enviar no mínimo 10000 pacotes por segundo, como uma tentativa de acelerar a análise (pode impactar a precisão dos resultados).</li>
 </ul>
-<p>A varredura com nmap retornou que um servidor web na porta 80 e um servidor SSH na porta 22. Ao acessar o servidor web via navegador, foi possível identificar que não existe um arquivo index.php ou index.html, visto que a página mostrou seu índice (Index of):</p>
+<p>A varredura com nmap retornou um servidor web na porta 80 e um servidor SSH na porta 22. Ao acessar o servidor web via navegador, foi possível identificar que não existe um arquivo index.php ou index.html, visto que a página mostrou seu índice (Index of):</p>
 <div style="text-align: center;">
   <img src="/pg-sunsetdecoy/imagem2.png" alt="Visualização ao acessar o webserver via navegador" class="centered-image" />
 </div>

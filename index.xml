@@ -6,8 +6,15 @@
     <description>Recent content on Hacking Things</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Nov 2024 11:00:08 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 28 Nov 2024 08:00:08 -0300</lastBuildDate>
     <atom:link href="https://erdrborges.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proving Grounds - Amaterasu</title>
+      <link>https://erdrborges.github.io/posts/proving-grounds/amaterasu/</link>
+      <pubDate>Thu, 28 Nov 2024 08:00:08 -0300</pubDate>
+      <guid>https://erdrborges.github.io/posts/proving-grounds/amaterasu/</guid>
+      <description>Dando continuidade à série de postagens sobre desafios realizados, trago a documentação da máquina Amaterasu (nível Fácil/Easy), disponível gratuitamente no Proving Grounds Play.&#xA;Para quem não está familiarizado, os desafios do tipo Capture The Flag (CTF) envolvem máquinas vulneráveis que têm como objetivo testar as habilidades dos participantes em identificar e explorar essas falhas. Os competidores devem encontrar flags (bandeiras), que são provas de que conseguiram comprometer com sucesso os alvos designados.</description>
+    </item>
     <item>
       <title>Proving Grounds - SunsetDecoy</title>
       <link>https://erdrborges.github.io/posts/proving-grounds/sunsetdecoy/</link>
